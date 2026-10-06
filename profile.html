@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ScholarMatch — Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar"><a class="brand" href="index.html"><span class="logo">🎓</span> ScholarMatch</a>
+    <nav><a href="index.html">Home</a><a href="scholarships.html">Scholarships</a><a href="matches.html">My
+        Matches</a><a href="saved.html">Saved</a><a href="applications.html">Applications</a></nav><a class="avatar"
+      href="profile.html">SP</a>
+  </header>
+  <main class="dashboard">
+    <div class="page-title">
+      <div><span class="eyebrow">STUDENT PROFILE</span>
+        <h1>My Profile</h1>
+        <p class="muted">Keep your information updated for accurate matching.</p>
+      </div><button class="btn btn-primary" onclick="alert('Profile saved!')">Save Changes</button>
+    </div>
+    <div class="profile-layout">
+      <aside class="side-card">
+        <div class="big-avatar">SP</div>
+        <h2>Sayan Pal</h2>
+        <p class="muted">B.Tech Computer Science</p>
+        <div class="progress"><span style="width:88%"></span></div><b>88% complete</b>
+        <hr><a class="side-link active" href="profile.html">👤 Personal details</a><a class="side-link"
+          href="matches.html">🎯 Matching preferences</a><a class="side-link" href="saved.html">🔖 Saved
+          scholarships</a>
+      </aside>
+      <section class="content-card">
+        <h2>Academic & personal information</h2>
+        <div class="grid-2">
+          <label>Full name<input value="Sayan Pal"></label><label>Email<input value="sayan@example.com"></label>
+          <label>Course<input value="B.Tech Computer Science"></label><label>Year<select>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select></label>
+          <label>Academic percentage<input value="82"></label><label>Annual family income (₹)<input
+              value="210000"></label>
+          <label>Category<select>
+              <option>General</option>
+              <option>OBC</option>
+              <option>SC</option>
+              <option>ST</option>
+              <option>EWS</option>
+            </select></label><label>State<select>
+              <option>Punjab</option>
+              <option>West Bengal</option>
+            </select></label>
+        </div>
+        <div class="info-box">💡 <b>Why we ask:</b> Your profile is compared with scholarship eligibility rules to
+          generate personalized matches.</div>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>

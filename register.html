@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ScholarMatch — Register</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body class="auth-page">
+  <div class="auth-wrap wide">
+    <a class="brand center" href="index.html"><span class="logo">🎓</span> ScholarMatch</a>
+    <div class="auth-card">
+      <span class="eyebrow">STEP 1 OF 2</span>
+      <h1>Create your student profile</h1>
+      <p class="muted">
+        These details help us identify matching scholarships.
+      </p>
+      <form onsubmit="
+            event.preventDefault();
+            localStorage.setItem('profileComplete', 'true');
+            location.href = 'profile.html';
+          ">
+        <div class="grid-2">
+          <label>Full name<input id="name" type="text" placeholder="Your full name" required /></label>
+          <label>Email<input type="email" placeholder="you@example.com" required /></label>
+          <label>Password<input type="password" placeholder="Create a password" required /></label>
+          <label>Course<input type="text" placeholder="B.Tech Computer Science" required /></label>
+          <label>Academic percentage<input type="number" min="0" max="100" placeholder="e.g. 82" /></label>
+          <label>Annual family income (₹)<input type="number" placeholder="e.g. 250000" /></label>
+          <label>Category<select>
+              <option>Select category</option>
+              <option>General</option>
+              <option>OBC</option>
+              <option>SC</option>
+              <option>ST</option>
+              <option>EWS</option>
+            </select></label>
+          <label>State<select>
+              <option>Select state</option>
+              <option>Punjab</option>
+              <option>West Bengal</option>
+              <option>Delhi</option>
+              <option>Maharashtra</option>
+              <option>Other</option>
+            </select></label>
+        </div>
+        <label class="check terms"><input type="checkbox" required /> I agree to the terms and privacy
+          policy.</label>
+        <button class="btn btn-primary full">
+          Create Profile & Continue →
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

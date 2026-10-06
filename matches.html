@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ScholarMatch — Matches</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><span class="logo">🎓</span> ScholarMatch</a
+      >
+      <nav>
+        <a href="index.html">Home</a><a href="scholarships.html">Scholarships</a
+        ><a class="active" href="matches.html">My Matches</a
+        ><a href="saved.html">Saved</a
+        ><a href="applications.html">Applications</a>
+      </nav>
+      <a class="avatar" href="profile.html">SP</a>
+    </header>
+    <main class="dashboard">
+      <div class="page-title">
+        <div>
+          <span class="eyebrow">PERSONALIZED RESULTS</span>
+          <h1>Your Scholarship Matches</h1>
+          <p class="muted">Based on the information in your student profile.</p>
+        </div>
+        <a class="btn btn-ghost" href="profile.html">Edit Profile</a>
+      </div>
+      <div class="match-banner">
+        <div>
+          <b>8 scholarships matched your profile</b>
+          <p>
+            Matches are calculated from the eligibility rules stored in the
+            scholarship database.
+          </p>
+        </div>
+        <span class="score-ring">88%</span>
+      </div>
+      <div class="result-list">
+        <article class="result-card">
+          <div class="result-icon">🏆</div>
+          <div class="result-main">
+            <div class="result-head">
+              <div>
+                <span class="tag">HIGH MATCH</span>
+                <h2>Future Leaders Scholarship</h2>
+              </div>
+              <strong>92%</strong>
+            </div>
+            <p>₹50,000 · Deadline: 30 Oct 2026</p>
+            <div class="criteria">
+              <span>✓ Percentage</span><span>✓ Course</span
+              ><span>✓ Income</span>
+            </div>
+          </div>
+          <div>
+            <button
+              class="btn btn-primary small"
+              onclick="location.href = 'applications.html'"
+            >
+              Apply / Track
+            </button>
+          </div>
+        </article>
+        <article class="result-card">
+          <div class="result-icon blue">📚</div>
+          <div class="result-main">
+            <div class="result-head">
+              <div>
+                <span class="tag">GOOD MATCH</span>
+                <h2>STEM Excellence Award</h2>
+              </div>
+              <strong>87%</strong>
+            </div>
+            <p>₹75,000 · Deadline: 15 Nov 2026</p>
+            <div class="criteria">
+              <span>✓ Course</span><span>✓ Academic record</span>
+            </div>
+          </div>
+          <div>
+            <button
+              class="btn btn-primary small"
+              onclick="location.href = 'applications.html'"
+            >
+              Apply / Track
+            </button>
+          </div>
+        </article>
+        <article class="result-card">
+          <div class="result-icon purple">💡</div>
+          <div class="result-main">
+            <div class="result-head">
+              <div>
+                <span class="tag">GOOD MATCH</span>
+                <h2>Young Innovators Grant</h2>
+              </div>
+              <strong>81%</strong>
+            </div>
+            <p>₹40,000 · Deadline: 22 Nov 2026</p>
+            <div class="criteria">
+              <span>✓ Course</span><span>✓ Project interest</span>
+            </div>
+          </div>
+          <div>
+            <button
+              class="btn btn-primary small"
+              onclick="location.href = 'applications.html'"
+            >
+              Apply / Track
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ScholarMatch — Scholarships</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><span class="logo">🎓</span> ScholarMatch</a
+      >
+      <nav>
+        <a href="index.html">Home</a
+        ><a class="active" href="scholarships.html">Scholarships</a
+        ><a href="matches.html">My Matches</a><a href="saved.html">Saved</a
+        ><a href="applications.html">Applications</a>
+      </nav>
+      <a class="avatar" href="profile.html">SP</a>
+    </header>
+    <main class="dashboard">
+      <div class="page-title">
+        <div>
+          <span class="eyebrow">SCHOLARSHIP DATABASE</span>
+          <h1>Explore Scholarships</h1>
+          <p class="muted">
+            Browse opportunities and use filters to narrow your search.
+          </p>
+        </div>
+      </div>
+      <div class="searchbar">
+        <input
+          placeholder="🔎  Search scholarships, providers or keywords..."
+          oninput="filterCards(this.value)"
+        /><select>
+          <option>All categories</option>
+          <option>STEM</option>
+          <option>Merit</option>
+          <option>Need-based</option></select
+        ><select>
+          <option>All deadlines</option>
+          <option>Next 30 days</option>
+          <option>Next 90 days</option>
+        </select>
+      </div>
+      <div class="scholar-grid" id="cards">
+        <article class="scholarship-card">
+          <div class="card-icon">🏆</div>
+          <span class="tag">MERIT</span>
+          <h2>Future Leaders Scholarship</h2>
+          <p>
+            For high-performing undergraduate students demonstrating leadership
+            potential.
+          </p>
+          <div class="meta">
+            <span>💰 ₹50,000</span><span>📅 30 Oct 2026</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-primary small" href="matches.html">View Details</a
+            ><button class="save-btn" onclick="saveItem(this)">♡ Save</button>
+          </div>
+        </article>
+        <article class="scholarship-card">
+          <div class="card-icon blue">📚</div>
+          <span class="tag">STEM</span>
+          <h2>STEM Excellence Award</h2>
+          <p>
+            Financial support for students pursuing science, technology,
+            engineering and mathematics.
+          </p>
+          <div class="meta">
+            <span>💰 ₹75,000</span><span>📅 15 Nov 2026</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-primary small" href="matches.html">View Details</a
+            ><button class="save-btn" onclick="saveItem(this)">♡ Save</button>
+          </div>
+        </article>
+        <article class="scholarship-card">
+          <div class="card-icon purple">💡</div>
+          <span class="tag">INNOVATION</span>
+          <h2>Young Innovators Grant</h2>
+          <p>
+            Supports students working on innovative academic or technology
+            projects.
+          </p>
+          <div class="meta">
+            <span>💰 ₹40,000</span><span>📅 22 Nov 2026</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-primary small" href="matches.html">View Details</a
+            ><button class="save-btn" onclick="saveItem(this)">♡ Save</button>
+          </div>
+        </article>
+        <article class="scholarship-card">
+          <div class="card-icon orange">🌱</div>
+          <span class="tag">NEED-BASED</span>
+          <h2>Education Support Grant</h2>
+          <p>
+            Assistance for students meeting specified academic and
+            household-income criteria.
+          </p>
+          <div class="meta">
+            <span>💰 ₹30,000</span><span>📅 05 Dec 2026</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-primary small" href="matches.html">View Details</a
+            ><button class="save-btn" onclick="saveItem(this)">♡ Save</button>
+          </div>
+        </article>
+      </div>
+    </main>
+    <script>
+      function saveItem(btn) {
+        btn.textContent = "♥ Saved";
+        btn.classList.add("saved");
+        localStorage.setItem("savedScholarship", "true");
+      }
+      function filterCards(q) {
+        document
+          .querySelectorAll(".scholarship-card")
+          .forEach(
+            (c) =>
+              (c.style.display = c.innerText
+                .toLowerCase()
+                .includes(q.toLowerCase())
+                ? ""
+                : "none"),
+          );
+      }
+    </script>
+  </body>
+</html>

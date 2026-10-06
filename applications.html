@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ScholarMatch — Applications</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html"
+        ><span class="logo">🎓</span> ScholarMatch</a
+      >
+      <nav>
+        <a href="index.html">Home</a><a href="scholarships.html">Scholarships</a
+        ><a href="matches.html">My Matches</a><a href="saved.html">Saved</a
+        ><a class="active" href="applications.html">Applications</a>
+      </nav>
+      <a class="avatar" href="profile.html">SP</a>
+    </header>
+    <main class="dashboard">
+      <div class="page-title">
+        <div>
+          <span class="eyebrow">APPLICATION TRACKER</span>
+          <h1>My Applications</h1>
+          <p class="muted">Track where each application stands.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div><b>3</b><span>Total applications</span></div>
+        <div><b>1</b><span>Under review</span></div>
+        <div><b>1</b><span>Approved</span></div>
+        <div><b>1</b><span>Action needed</span></div>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Scholarship</th>
+              <th>Applied</th>
+              <th>Deadline</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <b>Future Leaders Scholarship</b
+                ><small>Provider Foundation</small>
+              </td>
+              <td>12 Sep 2026</td>
+              <td>30 Oct 2026</td>
+              <td><span class="status review">Under Review</span></td>
+              <td><button class="text-btn">View</button></td>
+            </tr>
+            <tr>
+              <td>
+                <b>STEM Excellence Award</b><small>STEM Foundation</small>
+              </td>
+              <td>04 Sep 2026</td>
+              <td>15 Nov 2026</td>
+              <td><span class="status approved">Approved</span></td>
+              <td><button class="text-btn">View</button></td>
+            </tr>
+            <tr>
+              <td>
+                <b>Education Support Grant</b><small>Education Trust</small>
+              </td>
+              <td>01 Sep 2026</td>
+              <td>05 Dec 2026</td>
+              <td><span class="status action">Documents Needed</span></td>
+              <td><button class="text-btn">Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

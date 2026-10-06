@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ScholarMatch — Admin</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar adminbar">
+      <a class="brand" href="index.html"
+        ><span class="logo">🎓</span> ScholarMatch
+        <span class="admin-label">ADMIN</span></a
+      >
+      <nav>
+        <a class="active" href="admin.html">Dashboard</a
+        ><a href="scholarships.html">Public View</a>
+      </nav>
+      <a class="avatar" href="#">AD</a>
+    </header>
+    <main class="dashboard">
+      <div class="page-title">
+        <div>
+          <span class="eyebrow">ADMINISTRATION</span>
+          <h1>Scholarship Dashboard</h1>
+          <p class="muted">Manage scholarships and eligibility rules.</p>
+        </div>
+        <button
+          class="btn btn-primary"
+          onclick="alert('Add Scholarship form would open here.')"
+        >
+          + Add Scholarship
+        </button>
+      </div>
+      <div class="stats">
+        <div><b>24</b><span>Total scholarships</span></div>
+        <div><b>18</b><span>Active</span></div>
+        <div><b>6</b><span>Expiring soon</span></div>
+        <div><b>1,284</b><span>Student profiles</span></div>
+      </div>
+      <div class="table-card">
+        <div class="table-toolbar">
+          <h2>Scholarship records</h2>
+          <input placeholder="Search records..." />
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Scholarship</th>
+              <th>Provider</th>
+              <th>Amount</th>
+              <th>Deadline</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <b>Future Leaders Scholarship</b
+                ><small>Rule set: 4 criteria</small>
+              </td>
+              <td>Future Foundation</td>
+              <td>₹50,000</td>
+              <td>30 Oct 2026</td>
+              <td><span class="status approved">Active</span></td>
+              <td>
+                <button class="text-btn">Edit</button>
+                <button class="danger-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>STEM Excellence Award</b><small>Rule set: 3 criteria</small>
+              </td>
+              <td>STEM Foundation</td>
+              <td>₹75,000</td>
+              <td>15 Nov 2026</td>
+              <td><span class="status approved">Active</span></td>
+              <td>
+                <button class="text-btn">Edit</button>
+                <button class="danger-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b>Young Innovators Grant</b><small>Rule set: 2 criteria</small>
+              </td>
+              <td>Innovation Trust</td>
+              <td>₹40,000</td>
+              <td>22 Nov 2026</td>
+              <td><span class="status approved">Active</span></td>
+              <td>
+                <button class="text-btn">Edit</button>
+                <button class="danger-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="content-card rule-card">
+        <h2>Eligibility Rule Builder</h2>
+        <p class="muted">
+          Prototype controls for defining matching conditions.
+        </p>
+        <div class="rule-row">
+          <select>
+            <option>Academic percentage</option>
+            <option>Family income</option>
+            <option>Course</option>
+            <option>State</option></select
+          ><select>
+            <option>greater than or equal to</option>
+            <option>less than or equal to</option>
+            <option>equals</option></select
+          ><input value="75" /><button class="btn btn-ghost small">
+            + Add Rule
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

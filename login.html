@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ScholarMatch — Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <div class="auth-wrap">
+      <a class="brand center" href="index.html"
+        ><span class="logo">🎓</span> ScholarMatch</a
+      >
+      <div class="auth-card">
+        <span class="eyebrow">WELCOME BACK</span>
+        <h1>Sign in to your account</h1>
+        <p class="muted">Continue discovering scholarships that match you.</p>
+        <form
+          onsubmit="
+            event.preventDefault();
+            location.href = 'profile.html';
+          "
+        >
+          <label
+            >Email address<input
+              type="email"
+              placeholder="student@example.com"
+              required
+          /></label>
+          <label
+            >Password<input type="password" placeholder="••••••••" required
+          /></label>
+          <div class="form-row between">
+            <label class="check"><input type="checkbox" /> Remember me</label
+            ><a href="#">Forgot password?</a>
+          </div>
+          <button class="btn btn-primary full">Sign In</button>
+        </form>
+        <div class="divider"><span>or</span></div>
+        <a class="btn btn-ghost full" href="admin.html">Demo Admin Dashboard</a>
+        <p class="center muted">
+          New here? <a href="register.html">Create an account</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
